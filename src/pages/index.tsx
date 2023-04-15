@@ -1,5 +1,8 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import { useEffect, useState } from "react";
+import Desktop from "@/component/web/Desktop";
+import Mobile from "@/component/mobile/Mobile";
 
 const FaktumTest = localFont({
   variable: "--font-faktumTest",
@@ -79,9 +82,32 @@ const Pretendard = localFont({
 });
 
 export default function Home() {
+  const [isWeb, setIsWeb] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 1024) {
+        setIsWeb(false);
+      } else {
+        setIsWeb(true);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        if (window.innerWidth < 1024) {
+          setIsWeb(false);
+        } else {
+          setIsWeb(true);
+        }
+      });
+    };
+  }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      lha lha peel
+    <main
+      className={`flex min-h-screen flex-col items-center justify-between p-24 ${Pretendard.variable} ${FaktumTest.variable}`}
+    >
+      {isWeb ? <Desktop /> : <Mobile />}
     </main>
   );
 }
