@@ -85,6 +85,7 @@ export default function Home() {
   const [isWeb, setIsWeb] = useState(true);
 
   useEffect(() => {
+    setIsWeb(window.innerWidth > 1024);
     window.addEventListener("resize", () => {
       if (window.innerWidth < 1024) {
         setIsWeb(false);
@@ -104,9 +105,7 @@ export default function Home() {
     };
   }, []);
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${Pretendard.variable} ${FaktumTest.variable}`}
-    >
+    <main className={`${Pretendard.variable} ${FaktumTest.variable}`}>
       {isWeb ? <Desktop /> : <Mobile />}
     </main>
   );
