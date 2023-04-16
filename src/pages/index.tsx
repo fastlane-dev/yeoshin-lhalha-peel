@@ -106,7 +106,7 @@ export default function Home() {
   }, []);
   return (
     <main
-      className={` text-orange ${Pretendard.variable} ${FaktumTest.variable}`}
+      className={`whitespace-pre-wrap text-orange ${Pretendard.variable} ${FaktumTest.variable}`}
     >
       {isWeb ? <Desktop /> : <Mobile />}
     </main>
