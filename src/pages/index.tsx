@@ -105,7 +105,9 @@ export default function Home() {
     };
   }, []);
   return (
-    <main className={`${Pretendard.variable} ${FaktumTest.variable}`}>
+    <main
+      className={` text-orange ${Pretendard.variable} ${FaktumTest.variable}`}
+    >
       {isWeb ? <Desktop /> : <Mobile />}
     </main>
   );
