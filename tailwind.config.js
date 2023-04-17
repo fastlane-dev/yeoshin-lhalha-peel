@@ -22,6 +22,20 @@ module.exports = {
         pretendard: ["var(--font-pretendard)"],
         faktumTest: ["var(--font-faktumTest)"],
       },
+      animation: {
+        logoSpin: "logoSpin 4s linear infinite",
+      },
+      keyframes: {
+        logoSpin: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
     },
   },
   plugins: [],
