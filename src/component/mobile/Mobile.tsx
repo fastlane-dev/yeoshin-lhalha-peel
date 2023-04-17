@@ -4,7 +4,7 @@ import React from "react";
 const Mobile = () => {
   return (
     <section>
-      {/* first section */}
+      {/* first section - main */}
       <article>
         <div className="flex-start-column gap-[69px] pl-[31px] pt-[44px]">
           <Image alt="logo" src={"/images/logo.png"} width={67} height={17} />
@@ -16,7 +16,7 @@ const Mobile = () => {
           <div className="absolute left-[calc(2%+26px)] top-[calc(12%+80px)] w-fit origin-left -rotate-90 text-[16px] leading-[19.2px] tracking-[0.05em]">
             LHALA FILL
           </div>
-          <div className="absolute right-[calc(0%-29px)] top-0 z-10 inline-block h-[328px] w-[328px]">
+          <div className="absolute right-[calc(0%-29px)] top-0 z-[1] inline-block h-[328px] w-[328px]">
             <Image
               priority
               alt="main_image"
@@ -28,7 +28,7 @@ const Mobile = () => {
         </div>
       </article>
 
-      {/* second section */}
+      {/* second section - Product*/}
       <article className="mt-[79.48px]">
         <div>
           <div className="flex-start-column gap-[64px] px-[30px]">
@@ -83,7 +83,7 @@ const Mobile = () => {
         </div>
       </article>
 
-      {/* third section */}
+      {/* third section - Core Ingredients*/}
       <article className="flex-start-column mt-[156px] gap-[60px] px-[30px] font-faktumTest">
         <p className="text-[18px] font-[200] leading-[18px]">
           Core Ingredients
@@ -126,6 +126,21 @@ const Mobile = () => {
           </div>
         </div>
       </article>
+
+      {/* fourth section - certification details spinning*/}
+      <section className="relative mt-[115px] h-fit">
+        <div className="relative h-[216px] ">
+          <div className="absolute right-[30px] h-[216px] w-[210px] hover:animate-logoSpin">
+            <img
+              src={"/images/lala_spinning_logo.png"}
+              alt="lala_spinning_logo"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[70%] w-[110%] origin-left -rotate-[8deg] border border-[#FE3B1F]"></div>
+      </section>
+
+      {/* fifth section - news title */}
     </section>
   );
 };
