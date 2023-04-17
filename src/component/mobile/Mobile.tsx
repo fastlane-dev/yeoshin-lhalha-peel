@@ -182,6 +182,32 @@ const Mobile = () => {
           </div>
         </div>
       </section>
+
+      <footer className="mt-[63px] h-[551px] border-t-[1px] border-[#C0C0C0] px-[22px] pt-[65px]">
+        <p className="item-center flex justify-between">
+          <div className="h-[23px] w-[123px]">
+            <img src={"/images/logo_black.png"} alt="logo_black" />
+          </div>
+          <div className="flex-center gap-[6px] text-[16px] leading-[20px] tracking-[0.02em]">
+            <div>KR</div>
+            <div className="text-[#CCCCCC]">|</div>
+            <div className="text-[#CCCCCC]">EN</div>
+          </div>
+        </p>
+        <p className="flex-start-column mt-[106px] gap-[24px] font-faktumTest text-[12px] font-[300] leading-[16.07px] text-[#000000]">
+          <div className="flex-start-column gap-[6px] tracking-[0.04em]">
+            <p>TEL. 070-4858-4686</p>
+            <p>email. beauty@ysmedi.kr</p>
+          </div>
+
+          <div className="flex-start-column gap-[6px]">
+            <p className="font-pretendard font-[500]">
+              서울특별시 강남구 테헤란로 423 현대타워, 10층
+            </p>
+            <p>Ⓒ Ysmedi Co. Ltd.</p>
+          </div>
+        </p>
+      </footer>
     </section>
   );
 };
