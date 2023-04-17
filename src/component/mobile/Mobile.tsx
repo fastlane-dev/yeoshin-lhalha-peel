@@ -141,6 +141,47 @@ const Mobile = () => {
       </section>
 
       {/* fifth section - news title */}
+      <section className="mt-[102px] h-fit font-pretendard">
+        <div className="relative left-[-43px] mb-[72px]">
+          <img
+            className="h-[236px] w-[298px] rounded-[37px]"
+            src="/images/lala_last.png"
+            alt="lala_last"
+          />
+        </div>
+        <article className="flex-start-column  gap-[35px] pl-[30px] pr-[37px] text-[16px] font-[500] leading-[22.4px]">
+          <p className="w-full border-b-[1px] pb-[16px] pr-[39px] ">
+            세계 최초 4세대 필링제 LHALAPEEL 개발{" "}
+          </p>
+          <p className="w-full border-b-[1px] pb-[16px] pr-[11px] ">
+            {
+              "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위 ‘라라필’"
+            }
+          </p>
+          <p className="w-full border-b-[1px] pb-[16px] pr-[138px] ">
+            {"20’ LHA 제품 국내 첫 출시"}
+          </p>
+        </article>
+        <div className="px-[30px] font-[600] text-gray">
+          <p className="mt-[98px]  text-[12px]  leading-[21.6px]">
+            {
+              "본사의 유통 제품을 허가나 동의 없이 비정상 유통경로로 판매하는\n업체들이 있습니다. 병의원이 아닌 곳에서 시술을 제공받을시 피해를\n입을 수 있으며, 품질 보증이나 고객지원이 불가하니 반드시 정식 유\n통 제품으로 서비스 받으시기 바랍니다."
+            }
+          </p>
+          <div className="mt-[14px] text-[8px] leading-[14.4px]">
+            <p>
+              {
+                "LHALALA 브랜드의 BI를 도용하여 사용할 경우 상표법 제 93조에 의거하여 처벌받게 됩니다."
+              }
+            </p>
+            <li>
+              {
+                "상표법 제 93조 - 상표권 및 전용사용권의 침해행위를 한 자는 7년 이하의 징역 또는 1억원 이하의 벌금에 처한다."
+              }
+            </li>
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
