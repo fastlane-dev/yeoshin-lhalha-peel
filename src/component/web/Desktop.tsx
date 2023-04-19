@@ -177,11 +177,11 @@ const Desktop = () => {
                 "LHALALA 브랜드의 BI를 도용하여 사용할 경우 상표법 제 93조에 의거하여 처벌받게 됩니다."
               }
             </p>
-            <li className="pl-[12px]">
+            <p className="before:mr-[4px] before:content-['•']">
               {
                 "상표법 제 93조 - 상표권 및 전용사용권의 침해행위를 한 자는 7년 이하의 징역 또는 1억원 이하의 벌금에 처한다."
               }
-            </li>
+            </p>
           </div>
         </div>
       </section>

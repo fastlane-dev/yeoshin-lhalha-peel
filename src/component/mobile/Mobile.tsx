@@ -165,17 +165,20 @@ const Mobile = () => {
               "본사의 유통 제품을 허가나 동의 없이 비정상 유통경로로 판매하는 업체들이 있습니다. 병의원이 아닌 곳에서 시술을 제공받을시 피해를 입을 수 있으며, 품질 보증이나 고객지원이 불가하니 반드시 정식 유 통 제품으로 서비스 받으시기 바랍니다."
             }
           </p>
-          <div className="mt-[14px] text-[10px] leading-[14.4px]">
+          <div className="mt-[19px] text-[10px] leading-[18px]">
             <p>
               {
                 "LHALALA 브랜드의 BI를 도용하여 사용할 경우 상표법 제 93조에 의거하여 처벌받게 됩니다."
               }
             </p>
-            <li className="pl-[7px]">
-              {
-                "상표법 제 93조 - 상표권 및 전용사용권의 침해행위를 한 자는 7년 이하의 징역 또는 1억원 이하의 벌금에 처한다."
-              }
-            </li>
+            <div className="mt-[5px] flex items-start justify-start">
+              <div className="mr-[3px] text-[15px]">•</div>
+              <p>
+                {
+                  "상표법 제 93조 - 상표권 및 전용사용권의 침해행위를 한 자는 7년 이하의 징역 또는 1억원 이하의 벌금에 처한다."
+                }
+              </p>
+            </div>
           </div>
         </div>
       </section>
