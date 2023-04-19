@@ -135,7 +135,7 @@ const Desktop = () => {
       {/* fourth section - certification details spinning*/}
       <section className="relative mt-[133px] h-fit">
         <div className="relative h-[373px] ">
-          <div className="absolute right-[193px] h-[373px] w-[364px] hover:animate-logoSpin">
+          <div className="absolute right-[220px] h-[373px] w-[364px] hover:animate-logoSpin">
             <img
               src={"/images/lala_spinning_logo.png"}
               alt="lala_spinning_logo"
