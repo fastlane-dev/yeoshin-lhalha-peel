@@ -194,7 +194,7 @@ const Mobile = () => {
         <p className="flex-start-column mt-[106px] gap-[24px] font-faktumTest text-[12px] font-[400] leading-[16.07px] text-[#000000]">
           <div className="flex-start-column gap-[6px] tracking-[0.04em]">
             <p>TEL. 070-4858-4686</p>
-            <p>email. beauty@ysmedi.kr</p>
+            <p>Email. beauty@ysmedi.kr</p>
           </div>
 
           <div className="flex-start-column gap-[6px]">
