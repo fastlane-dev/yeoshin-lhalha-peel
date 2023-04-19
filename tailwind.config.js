@@ -1,18 +1,42 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/**/*.{js,ts,jsx,tsx}',
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        orange: "#FE3B1F",
+        gray: "#555555",
+      },
+      fontFamily: {
+        sans: [...fontFamily.sans],
+        pretendard: ["var(--font-pretendard)"],
+        faktumTest: ["var(--font-faktumTest)"],
+      },
+      animation: {
+        logoSpin: "logoSpin 4s linear infinite",
+      },
+      keyframes: {
+        logoSpin: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
       },
     },
   },
   plugins: [],
-}
+};
