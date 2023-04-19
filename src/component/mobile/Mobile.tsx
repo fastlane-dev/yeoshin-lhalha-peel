@@ -24,7 +24,7 @@ const Mobile = () => {
               fill
             />
           </div>
-          <div className="absolute top-[85%] w-[100%] origin-left -rotate-[9deg] border border-[#FE3B1F]"></div>
+          <div className="absolute top-[85%] w-[100%] origin-left -rotate-[9deg] border-b-[1px] border-[#FE3B1F]"></div>
         </div>
       </article>
 
@@ -76,7 +76,7 @@ const Mobile = () => {
               LHALA FILL
             </div>
           </div>
-          <div className="absolute top-[80%] w-[110%] origin-left rotate-[3deg] border border-[#FE3B1F]"></div>
+          <div className="absolute top-[80%] w-[110%] origin-left rotate-[3deg] border-b-[1px] border-[#FE3B1F]"></div>
         </div>
       </article>
 
@@ -138,7 +138,7 @@ const Mobile = () => {
             />
           </div>
         </div>
-        <div className="absolute top-[130px] w-[101vw] origin-left -rotate-[4.8deg] border border-[#FE3B1F]"></div>
+        <div className="absolute top-[130px] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]"></div>
       </section>
 
       {/* fifth section - news title */}

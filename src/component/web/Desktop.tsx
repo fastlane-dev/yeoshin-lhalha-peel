@@ -29,7 +29,7 @@ const Desktop = () => {
             <img alt="main_image" src={"/images/main_image.png"} />
           </div>
 
-          <div className="absolute top-[105%] w-[110%] origin-left -rotate-[9deg] border border-[#FE3B1F]"></div>
+          <div className="absolute top-[105%] w-[110%] origin-left -rotate-[9deg] border-b-[1px] border-[#FE3B1F]"></div>
         </div>
       </article>
 
@@ -79,7 +79,7 @@ const Desktop = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-[86%] w-[110%] origin-left rotate-[3deg] border border-[#FE3B1F]"></div>
+        <div className="absolute top-[86%] w-[110%] origin-left rotate-[3deg] border-b-[1px] border-[#FE3B1F]"></div>
       </article>
 
       {/* third section - Core Ingredients*/}
@@ -142,7 +142,7 @@ const Desktop = () => {
             />
           </div>
         </div>
-        <div className="absolute top-[88%] w-[101vw] origin-left -rotate-[4.8deg] border border-[#FE3B1F]"></div>
+        <div className="absolute top-[88%] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]"></div>
       </section>
 
       {/* fifth section - news title */}
