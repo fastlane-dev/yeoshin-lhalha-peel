@@ -83,45 +83,47 @@ const Desktop = () => {
       </article>
 
       {/* third section - Core Ingredients*/}
-      <article className="flex-start-column mt-[80px] gap-[60px] px-[30px] font-faktumTest">
-        <p className="text-[18px] font-[300] leading-[18px]">
+      <article className="flex-start-column mt-[100px] gap-[100px] pl-[356px] pr-[594px] font-faktumTest">
+        <p className="text-[30px] font-[300] leading-[30px]">
           Core Ingredients
         </p>
-        <div className="flex-start-column gap-[97px]">
+        <div className="flex-start-column gap-[100px]">
           <div>
-            <p className="mb-[9px] text-[14px] font-[200] leading-[22px]">1</p>
-            <p className="mb-[30px] text-[30px] font-[300] leading-[40px]">
+            <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">1</p>
+            <p className="mb-[30px] text-[70px] font-[300] leading-[80px]">
               LHA
             </p>
-            <p className="font-pretendard text-[15px] font-[500] leading-[22.5px]">
+            <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
               {
                 "표피 세포 사이를 통과하는 작은 LHA 성분은 진피까지 깊숙이 도달하여 진피층 재생을 유도하고, 자극 없이 피부 장벽을 보호합니다."
               }
             </p>
           </div>
           <div>
-            <p className="mb-[9px] text-[14px] font-[200] leading-[22px]">2</p>
+            <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">2</p>
             <div>
-              <span className="align-top text-[10px] tracking-[0.05em]">H</span>
-              <p className="mb-[30px] inline-block text-[30px] font-[300] leading-[30px]">
+              <span className="align-top text-[24px] leading-[30px] tracking-[0.05em]">
+                H
+              </span>
+              <p className="mb-[30px] inline-block text-[70px] font-[300] leading-[64px]">
                 P-Sol
               </p>
-              <span className="align-top text-[10px] tracking-[0.05em]">
+              <span className="align-top text-[24px] leading-[30px] tracking-[0.05em]">
                 TM
               </span>
             </div>
-            <p className="font-pretendard text-[15px] font-[500] leading-[22.5px]">
+            <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
               {
                 "특허받은 알칼리 성분 P-sol은 섬유아세포를 활성화해 콜라겐과 피부 지지 구조의 복원을 돕고, LHA와 결합 하여 멜라닌을 녹여 피부 투명도를 개선해줍니다."
               }
             </p>
           </div>
           <div>
-            <p className="mb-[9px] text-[14px] font-[200] leading-[22px]">3</p>
-            <p className="mb-[30px] text-[30px] font-[300] leading-[40px]">
+            <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">3</p>
+            <p className="mb-[30px] text-[70px] font-[300] leading-[80px]">
               Lipids
             </p>
-            <p className="font-pretendard text-[15px] font-[500] leading-[22.5px]">
+            <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
               {
                 "Lipids 성분은 각질층과 비슷한 천연 피부 구조체로 손상된 피부를 보호하여 회복을 돕습니다."
               }
