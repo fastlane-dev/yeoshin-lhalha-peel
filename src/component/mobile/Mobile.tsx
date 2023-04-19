@@ -7,7 +7,7 @@ const Mobile = () => {
       {/* first section - main */}
       <article>
         <div className="flex-start-column gap-[69px] pl-[31px] pt-[44px]">
-          <Image alt="logo" src={"/images/logo.png"} width={67} height={17} />
+          <img alt="logo" src={"/images/logo.png"} width={67} height={17} />
           <div className="font-pretendard text-[50px] font-[600] leading-[59.67px]">
             {"벗기지 않고\n채워주는"}
           </div>
@@ -58,7 +58,7 @@ const Mobile = () => {
             부드러운 각질 제거
           </div>
           <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            4세대 필링
+            콜라겐 리모델링
           </div>
           <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
             피지 분비 조절
