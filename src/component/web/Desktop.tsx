@@ -135,7 +135,7 @@ const Desktop = () => {
       {/* fourth section - certification details spinning*/}
       <section className="relative mt-[133px] h-fit">
         <div className="relative h-[373px] ">
-          <div className="absolute right-[30px] h-[373px] w-[364px] hover:animate-logoSpin">
+          <div className="absolute right-[193px] h-[373px] w-[364px] hover:animate-logoSpin">
             <img
               src={"/images/lala_spinning_logo.png"}
               alt="lala_spinning_logo"
@@ -147,15 +147,15 @@ const Desktop = () => {
 
       {/* fifth section - news title */}
       <section className="mt-[10px] h-fit font-pretendard">
-        <div className="flex-center gap-[80px]">
-          <div className="">
+        <div className="relative h-[520px]">
+          <div className="absolute left-[360px]">
             <img
               className="h-[520px] w-[520px] rounded-[37px]"
               src="/images/lala_last.png"
               alt="lala_last"
             />
           </div>
-          <article className="flex-start-column w-[654px] gap-[60px] text-[36px] font-[500] leading-[50.4px]">
+          <article className="flex-start-column absolute right-[306px] top-[100px] w-[654px] gap-[60px] text-[36px] font-[500] leading-[50.4px]">
             <p className="w-full">세계 최초 4세대 필링제 LHALAPEEL 개발 </p>
             <p className="w-full">
               {
