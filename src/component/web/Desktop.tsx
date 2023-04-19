@@ -15,77 +15,71 @@ const Desktop = () => {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="font-pretendard text-[90px] font-[600] leading-[108.02px]">
+        <div className="relative h-[943px]">
+          <div className="absolute left-[359px] top-[352px] z-[2] font-pretendard text-[90px] font-[600] leading-[108.02px]">
             {"벗기지 않고\n채워주는"}
           </div>
-          <div className="relative  h-[328px]">
-            <div className="absolute left-[calc(2%+26px)] top-[calc(12%+80px)] w-fit origin-left -rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
-              LHALA FILL
-            </div>
-            <div className="absolute right-[calc(0%-29px)] top-0 z-[1] inline-block h-[943px] w-[943px]">
-              <Image
-                priority
-                alt="main_image"
-                src={"/images/main_image.png"}
-                fill
-              />
-            </div>
-            {/* <div className="absolute top-[85%] w-[100%] origin-left -rotate-[9deg] border border-[#FE3B1F]"></div> */}
+          <div className="absolute left-[80px] top-[491px] w-fit origin-left -rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
+            LHALA FILL
           </div>
+          <div className="absolute right-[80px] top-[491px] w-fit origin-right rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
+            LHALA FILL
+          </div>
+          <div className="absolute right-[247px] top-0 z-[1] inline-block h-[943px] w-[943px]">
+            <img alt="main_image" src={"/images/main_image.png"} />
+          </div>
+
+          <div className="absolute top-[105%] w-[110%] origin-left -rotate-[9deg] border border-[#FE3B1F]"></div>
         </div>
       </article>
 
       {/* second section - Product*/}
-      <article className="mt-[79.48px]">
-        <div>
-          <div className="flex-start-column gap-[64px] px-[30px]">
-            <p className="font-faktumTest text-[18px] font-[300] leading-[18px]">
+      <article className="relative mt-[124px]">
+        <div className="pl-[360px] pr-[441px]">
+          <div className="flex-start-column gap-[80px]">
+            <p className="font-faktumTest text-[30px] font-[300] leading-[30px]">
               Product
             </p>
-            <div className="flex-start-column gap-[32px]">
-              <p className="font-faktumTest text-[30px] leading-[37.65px]">
+            <div className="flex-start-column gap-[30px]">
+              <p className="font-faktumTest text-[70px] leading-[115.59px]">
                 LHALA PEEL
               </p>
-              <p className="font-pretendard text-[15px] font-[500] leading-[27px]">
+              <p className="font-pretendard text-[26px] font-[500] leading-[46.8px]">
                 {
-                  "라라필은 글로벌 뷰티 1위 기업에서 개발한 LHA 성분에 특허받은 알칼리 성분을 결합한 필링 솔루션입니다.인위적으로 벗겨내는 일반적인 필링과는 달리 LHA와 P-sol, Lipids 성분으로 단백질을 천천히 녹이면서 피부 깊숙이 유효성분을 침투시켜 속부터 건강한 피부가 되도록 도와줍니다."
+                  "라라필은 글로벌 뷰티 1위 기업에서 개발한 LHA 성분에 특허받은 알칼리 성분을 결합한 필링 솔루션입니다. 인위적으로 벗겨내는 일반적인 필링과는 달리 LHA와 P-sol, Lipids 성분으로 단백질을 천천히 녹이면서 피부 깊숙이 유효성분을 침투시켜 속부터 건강한 피부가 되도록 도와줍니다."
                 }
               </p>
             </div>
           </div>
-        </div>
-        <div className="flex-center ml-[30px] mt-[44px] flex h-fit w-full flex-wrap justify-start gap-[8px]  border-[#FE3B1F]  font-pretendard text-[14px] font-[500] leading-[16.8px]">
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border ">
-            4세대 필링
-          </div>
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            자극없는 피부 재생
-          </div>
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            부드러운 각질 제거
-          </div>
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            4세대 필링
-          </div>
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            피지 분비 조절
-          </div>
-        </div>
-        <div className="relative mt-[100px] h-fit">
-          <div className="relative left-[30px]  h-[210px] w-[280px]">
-            <Image src={"/images/lala_card.png"} alt="card" fill />
-          </div>
-          <div className="relative h-[313px]">
-            <div className="absolute right-[30px] top-[48px] z-[1] h-[264px] w-[210px]">
-              <Image src={"/images/lala_bubble.png"} alt="bubble" fill />
+          <div className="flex-center mt-[60px] flex h-fit w-full flex-wrap justify-start gap-[16px]  border-[#FE3B1F]  font-pretendard text-[20px] font-[500] leading-[23.87px]">
+            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border ">
+              4세대 필링
             </div>
-            <div className="absolute left-[calc(2%+26px)] top-[calc(12%+96px)] w-fit origin-left -rotate-90  text-[14px] leading-[19.2px] tracking-[0.05em]">
-              LHALA FILL
+            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border">
+              자극없는 피부 재생
+            </div>
+            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border">
+              부드러운 각질 제거
+            </div>
+            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border">
+              콜라겐 리모델링
+            </div>
+            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border">
+              피지 분비 조절
             </div>
           </div>
-          <div className="absolute top-[80%] w-[110%] origin-left rotate-[3deg] border border-[#FE3B1F]"></div>
         </div>
+        <div>
+          <div className="relative mx-[360px] mt-[100px] h-[840px]">
+            <div className="relative left-0 h-[450px] w-[600px]">
+              <Image fill src={"/images/lala_card.png"} alt="card" />
+            </div>
+            <div className="absolute bottom-0 right-0 z-[1] h-[670px] w-[552px]">
+              <Image fill src={"/images/lala_bubble.png"} alt="bubble" />
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[86%] w-[110%] origin-left rotate-[3deg] border border-[#FE3B1F]"></div>
       </article>
 
       {/* third section - Core Ingredients*/}
@@ -189,12 +183,12 @@ const Desktop = () => {
       </section>
 
       <footer className="mt-[80px] h-[418px] border-t-[1px] border-[#C0C0C0] px-[30px] pt-[65px]">
-        <p className="item-center flex justify-between">
+        <div className="item-center flex justify-between">
           <div className="h-[23px] w-[123px]">
             <img src={"/images/logo_black.png"} alt="logo_black" />
           </div>
-        </p>
-        <p className="flex-start-column mt-[106px] gap-[24px] font-faktumTest text-[12px] font-[400] leading-[16.07px] text-[#000000]">
+        </div>
+        <div className="flex-start-column mt-[106px] gap-[24px] font-faktumTest text-[12px] font-[400] leading-[16.07px] text-[#000000]">
           <div className="flex-start-column gap-[6px] tracking-[0.04em]">
             <p>TEL. 070-4858-4686</p>
             <p>email. beauty@ysmedi.kr</p>
@@ -206,7 +200,7 @@ const Desktop = () => {
             </p>
             <p>Ⓒ Ysmedi Co. Ltd.</p>
           </div>
-        </p>
+        </div>
       </footer>
     </section>
   );
