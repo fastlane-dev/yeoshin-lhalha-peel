@@ -165,7 +165,7 @@ const Desktop = () => {
             <p className="w-full">{"20’ LHA 제품 국내 첫 출시"}</p>
           </article>
         </div>
-        <div className="mt-[201px] pl-[160px] text-[20px] font-[600] leading-[36px] text-gray">
+        <div className="mt-[201px] pl-[160px] pr-[283px] text-[20px] font-[600] leading-[36px] text-gray">
           <p className="">
             {
               "본사의 유통 제품을 허가나 동의 없이 비정상 유통경로로 판매하는 업체들이 있습니다.\n병의원이 아닌 곳에서 시술을 제공받을시 피해를 입을 수 있으며, 품질 보증이나 고객지원이 불가하니 반드시 정식 유통 제품으로 서비스 받으시기 바랍니다."
