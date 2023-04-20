@@ -32,14 +32,14 @@ const Mobile = () => {
       <article className="mt-[79.48px]">
         <div>
           <div className="flex-start-column gap-[64px] px-[30px]">
-            <p className="font-faktumTest text-[18px] font-[300] leading-[18px]">
+            <p className="font-faktumTest text-[20px] font-[300] leading-[20px]">
               Product
             </p>
             <div className="flex-start-column gap-[32px]">
               <p className="font-faktumTest text-[30px] leading-[37.65px]">
                 LHALA PEEL
               </p>
-              <p className="font-pretendard text-[15px] font-[500] leading-[27px]">
+              <p className="font-pretendard text-[16px] font-[500] leading-[28.8px]">
                 {
                   "라라필은 글로벌 뷰티 1위 기업에서 개발한 LHA 성분에 특허받은 알칼리 성분을 결합한 필링 솔루션입니다.인위적으로 벗겨내는 일반적인 필링과는 달리 LHA와 P-sol, Lipids 성분으로 단백질을 천천히 녹이면서 피부 깊숙이 유효성분을 침투시켜 속부터 건강한 피부가 되도록 도와줍니다."
                 }
@@ -47,7 +47,7 @@ const Mobile = () => {
             </div>
           </div>
         </div>
-        <div className="flex-center ml-[30px] mt-[44px] flex h-fit w-full flex-wrap justify-start gap-[8px]  border-[#FE3B1F]  font-pretendard text-[14px] font-[500] leading-[16.8px]">
+        <div className="flex-center mx-[30px] mt-[44px] flex h-fit w-full flex-wrap justify-start gap-[8px]  border-[#FE3B1F]  font-pretendard text-[14px] font-[400] leading-[16.8px]">
           <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border ">
             4세대 필링
           </div>
@@ -81,17 +81,17 @@ const Mobile = () => {
       </article>
 
       {/* third section - Core Ingredients*/}
-      <article className="flex-start-column mt-[80px] gap-[60px] px-[30px] font-faktumTest">
-        <p className="text-[18px] font-[300] leading-[18px]">
+      <article className="flex-start-column mt-[80px] gap-[58px] px-[30px] font-faktumTest">
+        <p className="text-[20px] font-[300] leading-[20px]">
           Core Ingredients
         </p>
-        <div className="flex-start-column gap-[97px]">
+        <div className="flex-start-column gap-[60px]">
           <div>
             <p className="mb-[9px] text-[14px] font-[200] leading-[22px]">1</p>
-            <p className="mb-[30px] text-[30px] font-[300] leading-[40px]">
+            <p className="mb-[32px] text-[30px] font-[300] leading-[40px]">
               LHA
             </p>
-            <p className="font-pretendard text-[15px] font-[500] leading-[22.5px]">
+            <p className="font-pretendard text-[16px] font-[500] leading-[24px]">
               {
                 "표피 세포 사이를 통과하는 작은 LHA 성분은 진피까지 깊숙이 도달하여 진피층 재생을 유도하고, 자극 없이 피부 장벽을 보호합니다."
               }
@@ -101,14 +101,14 @@ const Mobile = () => {
             <p className="mb-[9px] text-[14px] font-[200] leading-[22px]">2</p>
             <div>
               <span className="align-top text-[10px] tracking-[0.05em]">H</span>
-              <p className="mb-[30px] inline-block text-[30px] font-[300] leading-[30px]">
+              <p className="mb-[32px] inline-block text-[30px] font-[300] leading-[30px]">
                 P-Sol
               </p>
               <span className="align-top text-[10px] tracking-[0.05em]">
                 TM
               </span>
             </div>
-            <p className="font-pretendard text-[15px] font-[500] leading-[22.5px]">
+            <p className="font-pretendard text-[16px] font-[500] leading-[24px]">
               {
                 "특허받은 알칼리 성분 P-sol은 섬유아세포를 활성화해 콜라겐과 피부 지지 구조의 복원을 돕고, LHA와 결합 하여 멜라닌을 녹여 피부 투명도를 개선해줍니다."
               }
@@ -116,10 +116,10 @@ const Mobile = () => {
           </div>
           <div>
             <p className="mb-[9px] text-[14px] font-[200] leading-[22px]">3</p>
-            <p className="mb-[30px] text-[30px] font-[300] leading-[40px]">
+            <p className="mb-[32px] text-[30px] font-[300] leading-[40px]">
               Lipids
             </p>
-            <p className="font-pretendard text-[15px] font-[500] leading-[22.5px]">
+            <p className="font-pretendard text-[16px] font-[500] leading-[24px]">
               {
                 "Lipids 성분은 각질층과 비슷한 천연 피부 구조체로 손상된 피부를 보호하여 회복을 돕습니다."
               }
@@ -129,7 +129,7 @@ const Mobile = () => {
       </article>
 
       {/* fourth section - certification details spinning*/}
-      <section className="relative mt-[115px] h-fit">
+      <section className="relative mt-[60px] h-fit">
         <div className="relative h-[216px] ">
           <div className="absolute right-[30px] h-[216px] w-[210px] hover:animate-logoSpin">
             <img
@@ -142,10 +142,10 @@ const Mobile = () => {
       </section>
 
       {/* fifth section - news title */}
-      <section className="mt-[102px] h-fit font-pretendard">
+      <section className="mt-[60px] h-fit font-pretendard">
         <div className="flex-center mb-[32px]">
           <img
-            className="h-[236px] w-[235px] rounded-[37px]"
+            className="h-[315px] w-[315px] rounded-[37px]"
             src="/images/lala_last.png"
             alt="lala_last"
           />
@@ -183,7 +183,7 @@ const Mobile = () => {
         </div>
       </section>
 
-      <footer className="mt-[80px] h-[418px] border-t-[1px] border-[#C0C0C0] px-[30px] pt-[65px]">
+      <footer className="mt-[60px] h-[418px] border-t-[1px] border-[#C0C0C0] px-[30px] pt-[65px]">
         <p className="item-center flex justify-between">
           <div className="h-[23px] w-[123px]">
             <img src={"/images/logo_black.png"} alt="logo_black" />
