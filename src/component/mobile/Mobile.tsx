@@ -47,22 +47,26 @@ const Mobile = () => {
             </div>
           </div>
         </div>
-        <div className="flex-center mx-[30px] mt-[44px] flex h-fit w-full flex-wrap justify-start gap-[8px]  border-[#FE3B1F]  font-pretendard text-[14px] font-[400] leading-[16.8px]">
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border ">
-            4세대 필링
+        <div className="flex-center">
+          <div className="w-[30px]"></div>
+          <div className="flex-center mt-[44px] h-fit min-w-[315px] flex-wrap gap-[8px]  border-[#FE3B1F]  font-pretendard text-[14px] font-[400] leading-[16.8px]">
+            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border ">
+              4세대 필링
+            </div>
+            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
+              자극없는 피부 재생
+            </div>
+            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
+              부드러운 각질 제거
+            </div>
+            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
+              콜라겐 리모델링
+            </div>
+            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
+              피지 분비 조절
+            </div>
           </div>
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            자극없는 피부 재생
-          </div>
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            부드러운 각질 제거
-          </div>
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            콜라겐 리모델링
-          </div>
-          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-            피지 분비 조절
-          </div>
+          <div className="w-[30px]"></div>
         </div>
         <div className="relative mt-[100px] h-fit">
           <div className="relative left-[30px]  h-[210px] w-[280px]">
@@ -154,7 +158,7 @@ const Mobile = () => {
           <p className="w-full">세계 최초 4세대 필링제 LHALAPEEL 개발 </p>
           <p className="w-full">
             {
-              "조선일보가 주최하는 2021 소비자추천 브랜드 ‘필링 솔루션‘ 부문 1위 ‘라라필’"
+              "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위 ‘라라필’"
             }
           </p>
           <p className="w-full">{"20’ LHA 제품 국내 첫 출시"}</p>
