@@ -47,26 +47,22 @@ const Mobile = () => {
             </div>
           </div>
         </div>
-        <div className="flex-center">
-          <div className="w-[30px]"></div>
-          <div className="flex-center mt-[44px] h-fit min-w-[315px] flex-wrap gap-[8px]  border-[#FE3B1F]  font-pretendard text-[14px] font-[400] leading-[16.8px]">
-            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border ">
-              4세대 필링
-            </div>
-            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-              자극없는 피부 재생
-            </div>
-            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-              부드러운 각질 제거
-            </div>
-            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-              콜라겐 리모델링
-            </div>
-            <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
-              피지 분비 조절
-            </div>
+        <div className="flex-center mx-[30px] mt-[44px] h-fit min-w-[315px] flex-wrap justify-start gap-[8px]  border-[#FE3B1F]  font-pretendard text-[14px] font-[400] leading-[16.8px]">
+          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border ">
+            4세대 필링
           </div>
-          <div className="w-[30px]"></div>
+          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
+            자극없는 피부 재생
+          </div>
+          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
+            부드러운 각질 제거
+          </div>
+          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
+            콜라겐 리모델링
+          </div>
+          <div className="flex-center h-[46px] min-w-[152px] rounded-[65px] border">
+            피지 분비 조절
+          </div>
         </div>
         <div className="relative mt-[100px] h-fit">
           <div className="relative left-[30px]  h-[210px] w-[280px]">
