@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
+import { InView } from "react-intersection-observer";
+
 const Desktop = () => {
   return (
     <section>
@@ -16,8 +18,11 @@ const Desktop = () => {
         </div>
 
         <div className="relative h-[943px]">
-          <div className="absolute left-[359px] top-[352px] z-[2] font-pretendard text-[90px] font-[600] leading-[108.02px]">
+          <div className="absolute left-[359px] top-[352px] z-[2] animate-mainLogoDisappear font-pretendard text-[90px] font-[600] leading-[108.02px]">
             {"벗기지 않고\n채워주는"}
+          </div>
+          <div className="absolute left-[359px] top-[352px] z-[2] animate-mainLogoAppear font-pretendard text-[90px] font-[600] leading-[108.02px] opacity-0">
+            {"4세대 필링\n라라필"}
           </div>
           <div className="absolute left-[80px] top-[491px] w-fit origin-left -rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
             LHALA FILL
@@ -25,124 +30,260 @@ const Desktop = () => {
           <div className="absolute right-[80px] top-[491px] w-fit origin-right rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
             LHALA FILL
           </div>
-          <div className="absolute right-[247px] top-0 z-[1] inline-block h-[943px] w-[943px]">
+          <div className="absolute right-[247px] top-0 z-[1] inline-block h-[943px] w-[943px] animate-imageAppear opacity-0">
             <img alt="main_image" src={"/images/main_image.png"} />
           </div>
 
-          <div className="absolute top-[105%] w-[110%] origin-left -rotate-[9deg] border-b-[1px] border-[#FE3B1F]"></div>
+          <div className="absolute top-[105%] origin-left -rotate-[9deg] animate-lineAppear border-b-[1px] border-[#FE3B1F] "></div>
         </div>
       </article>
 
       {/* second section - Product*/}
+
       <article className="relative mt-[124px]">
         <div className="pl-[360px] pr-[441px]">
           <div className="flex-start-column gap-[80px]">
-            <p className="font-faktumTest text-[30px] font-[300] leading-[30px]">
-              Product
-            </p>
+            <InView triggerOnce threshold={0.2}>
+              {({ inView, ref }) => {
+                return (
+                  <p
+                    ref={ref}
+                    className={`font-faktumTest text-[30px] font-[300] leading-[30px] opacity-0 ${
+                      inView ? "animate-smoothAppear" : ""
+                    }`}
+                  >
+                    Product
+                  </p>
+                );
+              }}
+            </InView>
             <div className="flex-start-column gap-[30px]">
-              <p className="font-faktumTest text-[70px] leading-[115.59px]">
-                LHALA PEEL
-              </p>
-              <p className="font-pretendard text-[26px] font-[500] leading-[46.8px]">
-                {
-                  "라라필은 글로벌 뷰티 1위 기업에서 개발한 LHA 성분에 특허받은 알칼리 성분을 결합한 필링 솔루션입니다. 인위적으로 벗겨내는 일반적인 필링과는 달리 LHA와 P-sol, Lipids 성분으로 단백질을 천천히 녹이면서 피부 깊숙이 유효성분을 침투시켜 속부터 건강한 피부가 되도록 도와줍니다."
-                }
-              </p>
+              <InView threshold={0.4} triggerOnce>
+                {({ inView, ref }) => (
+                  <p
+                    ref={ref}
+                    className={`font-faktumTest text-[70px] leading-[115.59px] opacity-0 ${
+                      inView ? "animate-smoothAppear" : ""
+                    }`}
+                  >
+                    LHALA PEEL
+                  </p>
+                )}
+              </InView>
+              <InView threshold={0.4} triggerOnce>
+                {({ inView, ref }) => (
+                  <p
+                    ref={ref}
+                    className={`font-pretendard text-[26px] font-[500] leading-[46.8px] opacity-0 ${
+                      inView ? "animate-smoothAppear" : ""
+                    }`}
+                  >
+                    {
+                      "라라필은 글로벌 뷰티 1위 기업에서 개발한 LHA 성분에 특허받은 알칼리 성분을 결합한 필링 솔루션입니다. 인위적으로 벗겨내는 일반적인 필링과는 달리 LHA와 P-sol, Lipids 성분으로 단백질을 천천히 녹이면서 피부 깊숙이 유효성분을 침투시켜 속부터 건강한 피부가 되도록 도와줍니다."
+                    }
+                  </p>
+                )}
+              </InView>
             </div>
           </div>
-          <div className="flex-center mt-[60px] flex h-fit w-full flex-wrap justify-start gap-[16px]  border-[#FE3B1F]  font-pretendard text-[20px] font-[500] leading-[23.87px]">
-            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border ">
-              4세대 필링
-            </div>
-            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border">
-              자극없는 피부 재생
-            </div>
-            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border">
-              부드러운 각질 제거
-            </div>
-            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border">
-              콜라겐 리모델링
-            </div>
-            <div className="flex-center h-[104px] min-w-[211px] rounded-[65px] border">
-              피지 분비 조절
-            </div>
-          </div>
+          <InView triggerOnce threshold={0.4}>
+            {({ inView, ref }) => (
+              <div
+                ref={ref}
+                className="flex-center mt-[60px] flex h-fit w-full flex-wrap justify-start gap-[16px]  border-[#FE3B1F]  font-pretendard text-[20px] font-[500] leading-[23.87px]"
+              >
+                <div
+                  className={`flex-center h-[104px] min-w-[211px] rounded-[65px] border opacity-0  ${
+                    inView ? "animate-keywordStartAt0s" : ""
+                  }`}
+                >
+                  4세대 필링
+                </div>
+                <div
+                  className={`flex-center h-[104px] min-w-[211px] rounded-[65px] border opacity-0 ${
+                    inView ? "animate-keywordStartAt0_2s" : ""
+                  }`}
+                >
+                  자극없는 피부 재생
+                </div>
+                <div
+                  className={`flex-center h-[104px] min-w-[211px] rounded-[65px] border opacity-0 ${
+                    inView ? "animate-keywordStartAt0_4s" : ""
+                  }`}
+                >
+                  부드러운 각질 제거
+                </div>
+                <div
+                  className={`flex-center h-[104px] min-w-[211px] rounded-[65px] border opacity-0 ${
+                    inView ? "animate-keywordStartAt0_6s" : ""
+                  }`}
+                >
+                  콜라겐 리모델링
+                </div>
+                <div
+                  className={`flex-center h-[104px] min-w-[211px] rounded-[65px] border opacity-0 ${
+                    inView ? "animate-keywordStartAt0_8s" : ""
+                  }`}
+                >
+                  피지 분비 조절
+                </div>
+              </div>
+            )}
+          </InView>
         </div>
         <div>
-          <div className="relative mx-[360px] mt-[100px] h-[840px]">
-            <div className="relative left-0 h-[450px] w-[600px]">
-              <Image fill src={"/images/lala_card.png"} alt="card" />
-            </div>
-            <div className="absolute bottom-0 right-0 z-[1] h-[670px] w-[552px]">
-              <Image fill src={"/images/lala_bubble.png"} alt="bubble" />
-            </div>
-          </div>
+          <InView triggerOnce threshold={0.4}>
+            {({ inView, ref }) => (
+              <div
+                ref={ref}
+                className="relative mx-[360px] mt-[100px] h-[840px]"
+              >
+                <div
+                  className={`relative left-0 h-[450px] w-[600px] opacity-0 ${
+                    inView ? " animate-smoothAppear" : ""
+                  }`}
+                >
+                  <Image fill src={"/images/lala_card.png"} alt="card" />
+                </div>
+                <div
+                  className={`absolute bottom-0 right-0 z-[1] h-[670px] w-[552px] opacity-0 ${
+                    inView ? " animate-smoothAppear" : ""
+                  }`}
+                >
+                  <Image fill src={"/images/lala_bubble.png"} alt="bubble" />
+                </div>
+              </div>
+            )}
+          </InView>
         </div>
-        <div className="absolute top-[86%] w-[110%] origin-left rotate-[3deg] border-b-[1px] border-[#FE3B1F]"></div>
+        <InView triggerOnce threshold={0.4}>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className={`"absolute top-[86%] origin-left rotate-[3deg] ${
+                inView ? "animate-lineAppear" : ""
+              } border-[#FE3B1F]" border-b-[1px]`}
+            ></div>
+          )}
+        </InView>
       </article>
 
       {/* third section - Core Ingredients*/}
       <article className="flex-start-column mt-[100px] gap-[100px] pl-[356px] pr-[594px] font-faktumTest">
-        <p className="text-[30px] font-[300] leading-[30px]">
-          Core Ingredients
-        </p>
+        <InView triggerOnce threshold={0.2}>
+          {({ inView, ref }) => (
+            <p
+              ref={ref}
+              className={`text-[30px] font-[300] leading-[30px] opacity-0 ${
+                inView ? "animate-smoothAppear" : ""
+              }`}
+            >
+              Core Ingredients
+            </p>
+          )}
+        </InView>
+
         <div className="flex-start-column gap-[100px]">
-          <div>
-            <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">1</p>
-            <p className="mb-[30px] text-[70px] font-[300] leading-[80px]">
-              LHA
-            </p>
-            <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
-              {
-                "표피 세포 사이를 통과하는 작은 LHA 성분은 진피까지 깊숙이 도달하여 진피층 재생을 유도하고, 자극 없이 피부 장벽을 보호합니다."
-              }
-            </p>
-          </div>
-          <div>
-            <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">2</p>
-            <div>
-              <span className="align-top text-[24px] leading-[30px] tracking-[0.05em]">
-                H
-              </span>
-              <p className="mb-[30px] inline-block text-[70px] font-[300] leading-[64px]">
-                P-Sol
-              </p>
-              <span className="align-top text-[24px] leading-[30px] tracking-[0.05em]">
-                TM
-              </span>
-            </div>
-            <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
-              {
-                "특허받은 알칼리 성분 P-sol은 섬유아세포를 활성화해 콜라겐과 피부 지지 구조의 복원을 돕고, LHA와 결합 하여 멜라닌을 녹여 피부 투명도를 개선해줍니다."
-              }
-            </p>
-          </div>
-          <div>
-            <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">3</p>
-            <p className="mb-[30px] text-[70px] font-[300] leading-[80px]">
-              Lipids
-            </p>
-            <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
-              {
-                "Lipids 성분은 각질층과 비슷한 천연 피부 구조체로 손상된 피부를 보호하여 회복을 돕습니다."
-              }
-            </p>
-          </div>
+          <InView triggerOnce threshold={0.4}>
+            {({ inView, ref }) => (
+              <div
+                ref={ref}
+                className={`opacity-0 ${inView ? "animate-smoothAppear" : ""}`}
+              >
+                <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">
+                  1
+                </p>
+                <p className="mb-[30px] text-[70px] font-[300] leading-[80px]">
+                  LHA
+                </p>
+                <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
+                  {
+                    "표피 세포 사이를 통과하는 작은 LHA 성분은 진피까지 깊숙이 도달하여 진피층 재생을 유도하고, 자극 없이 피부 장벽을 보호합니다."
+                  }
+                </p>
+              </div>
+            )}
+          </InView>
+          <InView triggerOnce threshold={0.4}>
+            {({ inView, ref }) => (
+              <div
+                ref={ref}
+                className={`opacity-0 ${inView ? "animate-smoothAppear" : ""}`}
+              >
+                <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">
+                  2
+                </p>
+                <div>
+                  <span className="align-top text-[24px] leading-[30px] tracking-[0.05em]">
+                    H
+                  </span>
+                  <p className="mb-[30px] inline-block text-[70px] font-[300] leading-[64px]">
+                    P-Sol
+                  </p>
+                  <span className="align-top text-[24px] leading-[30px] tracking-[0.05em]">
+                    TM
+                  </span>
+                </div>
+                <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
+                  {
+                    "특허받은 알칼리 성분 P-sol은 섬유아세포를 활성화해 콜라겐과 피부 지지 구조의 복원을 돕고, LHA와 결합 하여 멜라닌을 녹여 피부 투명도를 개선해줍니다."
+                  }
+                </p>
+              </div>
+            )}
+          </InView>
+
+          <InView triggerOnce threshold={0.4}>
+            {({ inView, ref }) => (
+              <div
+                ref={ref}
+                className={`opacity-0 ${inView ? "animate-smoothAppear" : ""}`}
+              >
+                <p className="mb-[24px] text-[22px] font-[200] leading-[22px]">
+                  3
+                </p>
+                <p className="mb-[30px] text-[70px] font-[300] leading-[80px]">
+                  Lipids
+                </p>
+                <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
+                  {
+                    "Lipids 성분은 각질층과 비슷한 천연 피부 구조체로 손상된 피부를 보호하여 회복을 돕습니다."
+                  }
+                </p>
+              </div>
+            )}
+          </InView>
         </div>
       </article>
 
       {/* fourth section - certification details spinning*/}
       <section className="relative mt-[133px] h-fit">
-        <div className="relative h-[373px] ">
-          <div className="absolute right-[220px] h-[373px] w-[364px] hover:animate-logoSpin">
-            <img
-              src={"/images/lala_spinning_logo.png"}
-              alt="lala_spinning_logo"
-            />
-          </div>
-        </div>
-        <div className="absolute top-[88%] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]"></div>
+        <InView triggerOnce threshold={0.4}>
+          {({ inView, ref }) => (
+            <div ref={ref} className="relative h-[373px] ">
+              <div
+                className={`absolute right-[220px] h-[373px] w-[364px] -rotate-45 ${
+                  inView ? "animate-logoSpin" : ""
+                }`}
+              >
+                <img
+                  src={"/images/lala_spinning_logo.png"}
+                  alt="lala_spinning_logo"
+                />
+              </div>
+            </div>
+          )}
+        </InView>
+        <InView triggerOnce threshold={0.4}>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className={`absolute ${
+                inView ? "animate-lineAppear" : ""
+              } top-[88%] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
+            ></div>
+          )}
+        </InView>
       </section>
 
       {/* fifth section - news title */}
