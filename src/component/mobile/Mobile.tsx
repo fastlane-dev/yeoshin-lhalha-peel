@@ -38,13 +38,31 @@ const Mobile = () => {
       <article className="mt-[79.48px]">
         <div>
           <div className="flex-start-column gap-[64px] px-[30px]">
-            <p className="animate-smoothAppear font-faktumTest text-[20px] font-[300] leading-[20px]">
-              Product
-            </p>
+            <InView triggerOnce threshold={0.4}>
+              {({ inView, ref }) => (
+                <p
+                  ref={ref}
+                  className={`${
+                    inView ? "animate-smoothAppear" : ""
+                  } font-faktumTest text-[20px] font-[300] leading-[20px] opacity-0`}
+                >
+                  Product
+                </p>
+              )}
+            </InView>
             <div className="flex-start-column gap-[32px]">
-              <p className="animate-smoothAppear font-faktumTest text-[30px] leading-[37.65px]">
-                LHALA PEEL
-              </p>
+              <InView triggerOnce threshold={0.4}>
+                {({ inView, ref }) => (
+                  <p
+                    ref={ref}
+                    className={`${
+                      inView ? "animate-smoothAppear" : ""
+                    } font-faktumTest text-[30px] leading-[37.65px] opacity-0`}
+                  >
+                    LHALA PEEL
+                  </p>
+                )}
+              </InView>
               <InView triggerOnce threshold={0.4}>
                 {({ inView, ref }) => (
                   <p
