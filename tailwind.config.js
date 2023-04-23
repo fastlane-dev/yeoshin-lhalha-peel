@@ -23,7 +23,8 @@ module.exports = {
         faktumTest: ["var(--font-faktumTest)"],
       },
       animation: {
-        logoSpin: "logoSpin 2s forwards linear",
+        logoSpin: "logoSpin 1s forwards linear",
+        mobileLogoSpin: "logoSpin 1s forwards linear",
 
         smoothAppear: "smoothAppear 0.8s forwards ease-in-out",
         smoothDisappear: "smoothDisappear 0.6s forwards ease-in-out",
@@ -51,13 +52,13 @@ module.exports = {
           },
 
           to: {
-            transform: "rotate(0deg)",
+            transform: "rotate(5deg)",
           },
         },
         smoothAppear: {
           "0%": {
             opacity: 0,
-            transform: "translateY(20px)",
+            transform: "translateY(40px)",
           },
           "100%": {
             opacity: 1,
