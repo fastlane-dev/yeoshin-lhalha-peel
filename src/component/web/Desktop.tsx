@@ -160,7 +160,7 @@ const Desktop = () => {
           {({ inView, ref }) => (
             <div
               ref={ref}
-              className={`"absolute top-[86%] origin-left rotate-[3deg] ${
+              className={`absolute top-[86%] origin-left rotate-[3deg] ${
                 inView ? "animate-lineAppear" : ""
               } border-[#FE3B1F]" border-b-[1px]`}
             ></div>
@@ -280,7 +280,7 @@ const Desktop = () => {
               ref={ref}
               className={`absolute ${
                 inView ? "animate-lineAppear" : ""
-              } top-[88%] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
+              } top-[83%] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
             ></div>
           )}
         </InView>
