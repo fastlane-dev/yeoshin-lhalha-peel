@@ -1,3 +1,4 @@
+import { calculateTopValue } from "@/utils/calculateTopValue";
 import Image from "next/image";
 import React from "react";
 import { InView } from "react-intersection-observer";
@@ -271,12 +272,13 @@ const Mobile = () => {
                   alt="lala_spinning_logo"
                 />
               </div>
+              <div
+                className={`absolute origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F] ${
+                  inView ? "animate-lineAppear" : ""
+                }`}
+                style={{ top: `${calculateTopValue(window.innerWidth)}%` }}
+              ></div>
             </div>
-            <div
-              className={`absolute top-[123px] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F] ${
-                inView ? "animate-lineAppear" : ""
-              }`}
-            ></div>
           </section>
         )}
       </InView>

@@ -1,9 +1,16 @@
+import { calculateTopValue } from "@/utils/calculateTopValue";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { InView } from "react-intersection-observer";
 
 const Desktop = () => {
+  const [innerWidth, setInnerWidth] = useState(1920);
+
+  useEffect(() => {
+    setInnerWidth(window.innerWidth);
+  }, []);
+
   return (
     <section>
       {/* first section - main */}
@@ -132,29 +139,32 @@ const Desktop = () => {
           </InView>
         </div>
         <div>
-          <InView triggerOnce threshold={0.4}>
-            {({ inView, ref }) => (
-              <div
-                ref={ref}
-                className="relative mx-[360px] mt-[100px] h-[840px]"
-              >
+          <div className="relative mx-[360px] mt-[100px] h-[840px]">
+            <InView triggerOnce threshold={0.4}>
+              {({ inView, ref }) => (
                 <div
+                  ref={ref}
                   className={`relative left-0 h-[450px] w-[600px] opacity-0 ${
                     inView ? " animate-smoothAppear" : ""
                   }`}
                 >
                   <Image fill src={"/images/lala_card.png"} alt="card" />
                 </div>
+              )}
+            </InView>
+            <InView triggerOnce threshold={0.4}>
+              {({ inView, ref }) => (
                 <div
+                  ref={ref}
                   className={`absolute bottom-0 right-0 z-[1] h-[670px] w-[552px] opacity-0 ${
                     inView ? " animate-smoothAppear" : ""
                   }`}
                 >
                   <Image fill src={"/images/lala_bubble.png"} alt="bubble" />
                 </div>
-              </div>
-            )}
-          </InView>
+              )}
+            </InView>
+          </div>
         </div>
         <InView triggerOnce threshold={0.4}>
           {({ inView, ref }) => (
@@ -271,17 +281,18 @@ const Desktop = () => {
                   alt="lala_spinning_logo"
                 />
               </div>
+              <InView triggerOnce threshold={0.4}>
+                {({ inView, ref }) => (
+                  <div
+                    ref={ref}
+                    className={`absolute ${
+                      inView ? "animate-lineAppear" : ""
+                    } w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
+                    style={{ top: `${calculateTopValue(innerWidth)}%` }}
+                  ></div>
+                )}
+              </InView>
             </div>
-          )}
-        </InView>
-        <InView triggerOnce threshold={0.4}>
-          {({ inView, ref }) => (
-            <div
-              ref={ref}
-              className={`absolute ${
-                inView ? "animate-lineAppear" : ""
-              } top-[83%] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
-            ></div>
           )}
         </InView>
       </section>
