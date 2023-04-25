@@ -26,24 +26,19 @@ module.exports = {
         logoSpin: "logoSpin 0.8s forwards linear",
         mobileLogoSpin: "logoSpin 1.2s forwards linear",
 
-        smoothAppear: "smoothAppear 1s forwards ease-in-out",
-        smoothDisappear: "smoothDisappear 0.8s forwards ease-in-out",
+        smoothAppear: "smoothAppear 0.7s forwards ease-in-out",
 
-        mainLogoAppear: "smoothAppear 1.2s forwards 1.5s ease-in-out",
-        mainLogoDisappear: "smoothDisappear 1.2s forwards 1.3s ease-in-out",
+        mainLogoAppear: "smoothAppear 0.8s forwards 1.5s ease-in-out",
+        mainLogoDisappear: "smoothDisappear 0.8s forwards 1.3s ease-in-out",
 
         lineAppear: "lineAppear 1.5s forwards linear",
         imageAppear: "smoothAppear 0.8s forwards linear",
 
-        keywordStartAt0s: "moveFromLeftToRight 0.4s forwards ease-in-out",
-        keywordStartAt0_2s:
-          "moveFromLeftToRight 0.4s forwards 0.5s ease-in-out",
-        keywordStartAt0_4s:
-          "moveFromLeftToRight 0.4s forwards 1.3s ease-in-out",
-        keywordStartAt0_6s:
-          "moveFromLeftToRight 0.4s forwards 2.1s ease-in-out",
-        keywordStartAt0_8s:
-          "moveFromLeftToRight 0.4s forwards 2.9s ease-in-out",
+        keywordStartAt0s: "moveFromDownToUp 0.4s forwards ease-in-out",
+        keywordStartAt0_2s: "moveFromDownToUp 0.4s forwards 0.5s ease-in-out",
+        keywordStartAt0_4s: "moveFromDownToUp 0.4s forwards 0.9s ease-in-out",
+        keywordStartAt0_6s: "moveFromDownToUp 0.4s forwards 1.3s ease-in-out",
+        keywordStartAt0_8s: "moveFromDownToUp 0.4s forwards 1.7s ease-in-out",
       },
       keyframes: {
         logoSpin: {
@@ -86,15 +81,15 @@ module.exports = {
             zIndex: 0,
           },
         },
-        moveFromLeftToRight: {
+        moveFromDownToUp: {
           "0%": {
             opacity: 0,
-            transform: "translateX(-20px)",
+            transform: "translateY(20px)",
           },
 
           "100%": {
             opacity: 1,
-            transform: "translateX(0px)",
+            transform: "translateY(0px)",
           },
         },
       },
