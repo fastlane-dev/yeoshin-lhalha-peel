@@ -23,27 +23,27 @@ module.exports = {
         faktumTest: ["var(--font-faktumTest)"],
       },
       animation: {
-        logoSpin: "logoSpin 1s forwards linear",
-        mobileLogoSpin: "logoSpin 1s forwards linear",
+        logoSpin: "logoSpin 0.8s forwards linear",
+        mobileLogoSpin: "logoSpin 1.2s forwards linear",
 
-        smoothAppear: "smoothAppear 0.8s forwards ease-in-out",
-        smoothDisappear: "smoothDisappear 0.6s forwards ease-in-out",
+        smoothAppear: "smoothAppear 1s forwards ease-in-out",
+        smoothDisappear: "smoothDisappear 0.8s forwards ease-in-out",
 
-        mainLogoAppear: "smoothAppear 1s forwards 0.8s ease-in-out",
-        mainLogoDisappear: "smoothDisappear 1s forwards 0.8s ease-in-out",
+        mainLogoAppear: "smoothAppear 1.2s forwards 1.5s ease-in-out",
+        mainLogoDisappear: "smoothDisappear 1.2s forwards 1.3s ease-in-out",
 
-        lineAppear: "lineAppear 2s forwards linear",
-        imageAppear: "smoothAppear 1s forwards linear",
+        lineAppear: "lineAppear 1.5s forwards linear",
+        imageAppear: "smoothAppear 0.8s forwards linear",
 
-        keywordStartAt0s: "moveFromLeftToRight 0.6s forwards ease-in-out",
+        keywordStartAt0s: "moveFromLeftToRight 0.4s forwards ease-in-out",
         keywordStartAt0_2s:
-          "moveFromLeftToRight 0.6s forwards 0.2s ease-in-out",
+          "moveFromLeftToRight 0.4s forwards 0.5s ease-in-out",
         keywordStartAt0_4s:
-          "moveFromLeftToRight 0.6s forwards 0.4s ease-in-out",
+          "moveFromLeftToRight 0.4s forwards 1.3s ease-in-out",
         keywordStartAt0_6s:
-          "moveFromLeftToRight 0.6s forwards 0.6s ease-in-out",
+          "moveFromLeftToRight 0.4s forwards 2.1s ease-in-out",
         keywordStartAt0_8s:
-          "moveFromLeftToRight 0.6s forwards 0.8s ease-in-out",
+          "moveFromLeftToRight 0.4s forwards 2.9s ease-in-out",
       },
       keyframes: {
         logoSpin: {
