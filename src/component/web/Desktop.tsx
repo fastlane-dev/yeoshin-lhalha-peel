@@ -1,21 +1,68 @@
 import { calculateTopValue } from "@/utils/calculateTopValue";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
-import { InView } from "react-intersection-observer";
+import { InView, useInView } from "react-intersection-observer";
 
 const Desktop = () => {
   const [innerWidth, setInnerWidth] = useState(1920);
+  const [bubbleHeight, setBubbleHeight] = useState(0);
+  const [cardHeight, setCardHeight] = useState(0);
+  const [cardBubbleContainerHeight, setCardBubbleContainerHeight] = useState(0);
+
+  const cardImageRef = useRef<HTMLDivElement>();
+  const { ref: cardImageInViewRef, inView: cardImageInview } = useInView({
+    threshold: 0.4,
+    triggerOnce: true,
+  });
+
+  const bubbleImageRef = useRef<HTMLDivElement>();
+  const cardBubbleContainerRef = useRef<HTMLDivElement>(null);
+
+  const { ref: bubbleImageInViewRef, inView: bubbleImageInview } = useInView({
+    threshold: 0.4,
+    triggerOnce: true,
+  });
+
+  const cardImageSetRefs = useCallback(
+    (node: HTMLDivElement) => {
+      cardImageRef.current = node;
+      cardImageInViewRef(node);
+    },
+    [cardImageInViewRef]
+  );
+
+  const bubbleImageSetRefs = useCallback(
+    (node: HTMLDivElement) => {
+      bubbleImageRef.current = node;
+      bubbleImageInViewRef(node);
+    },
+    [bubbleImageInViewRef]
+  );
 
   useEffect(() => {
     setInnerWidth(window.innerWidth);
+    setCardHeight(
+      cardImageRef.current ? (cardImageRef.current?.clientWidth / 100) * 75 : 0
+    );
+    setBubbleHeight(
+      bubbleImageRef.current
+        ? (bubbleImageRef.current?.clientWidth / 100) * 128
+        : 0
+    );
+
+    setCardBubbleContainerHeight(
+      cardBubbleContainerRef.current
+        ? (cardBubbleContainerRef.current?.clientWidth / 100) * 70
+        : 0
+    );
   }, []);
 
   return (
     <section>
       {/* first section - main */}
       <article>
-        <div className="flex-center justify-between gap-[69px] pl-[160px] pr-[201px] pt-[60px]">
+        <div className="flex-center justify-between  pl-[8vw] pr-[10vw] pt-[60px]">
           <Image alt="logo" src={"/images/logo.png"} width={137} height={37} />
           <div className="flex-center gap-[10px] text-[20px] leading-[24.68px] tracking-[0.02em]">
             <div>KR</div>
@@ -24,23 +71,25 @@ const Desktop = () => {
           </div>
         </div>
 
-        <div className="relative h-[943px]">
-          <div className="absolute left-[359px] top-[352px] z-[2] animate-mainLogoDisappear font-pretendard text-[90px] font-[600] leading-[108.02px]">
-            {"벗기지 않고\n채워주는"}
-          </div>
-          <div className="absolute left-[359px] top-[352px] z-[2] animate-mainLogoAppear font-pretendard text-[90px] font-[600] leading-[108.02px] opacity-0">
-            {"4세대 필링\n라라필"}
-          </div>
-          <div className="absolute left-[80px] top-[491px] w-fit origin-left -rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
+        <div className="flex-center relative top-[-45px] h-[49vw] justify-between">
+          <div className="relative left-[3vw] w-fit  origin-left -rotate-90  text-[14px] leading-[19.2px] tracking-[0.05em]">
             LHALA FILL
           </div>
-          <div className="absolute right-[80px] top-[491px] w-fit origin-right rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
-            LHALA FILL
+          <div className="relative left-[11vw] top-[-6.5vw] w-[21vw]">
+            <div className="absolute z-[2] animate-mainLogoAppear font-pretendard text-[4.5vw] font-[600] leading-[5.5vw] opacity-0">
+              {"4세대 필링\n라라필"}
+            </div>
+            <div className="absolute z-[2] animate-mainLogoDisappear font-pretendard text-[4.5vw] font-[600] leading-[5.5vw]">
+              {"벗기지 않고\n채워주는"}
+            </div>
           </div>
-          <div className="absolute right-[247px] top-0 z-[1] inline-block h-[943px] w-[943px] animate-imageAppear opacity-0">
+          <div className="right-[12vw] top-0 z-[1] inline-block h-[49vw] w-[49vw] animate-imageAppear opacity-0">
             <img alt="main_image" src={"/images/main_image.png"} />
           </div>
 
+          <div className="relative right-[3vw] w-fit origin-right rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
+            LHALA FILL
+          </div>
           <div className="absolute top-[105%] origin-left -rotate-[9deg] animate-lineAppear border-b-[1px] border-[#FE3B1F] "></div>
         </div>
       </article>
@@ -139,31 +188,29 @@ const Desktop = () => {
           </InView>
         </div>
         <div>
-          <div className="relative mx-[360px] mt-[100px] h-[840px]">
-            <InView triggerOnce threshold={0.4}>
-              {({ inView, ref }) => (
-                <div
-                  ref={ref}
-                  className={`relative left-0 h-[450px] w-[600px] opacity-0 ${
-                    inView ? " animate-smoothAppear" : ""
-                  }`}
-                >
-                  <Image fill src={"/images/lala_card.png"} alt="card" />
-                </div>
-              )}
-            </InView>
-            <InView triggerOnce threshold={0.4}>
-              {({ inView, ref }) => (
-                <div
-                  ref={ref}
-                  className={`absolute bottom-0 right-0 z-[1] h-[670px] w-[552px] opacity-0 ${
-                    inView ? " animate-smoothAppear" : ""
-                  }`}
-                >
-                  <Image fill src={"/images/lala_bubble.png"} alt="bubble" />
-                </div>
-              )}
-            </InView>
+          <div
+            ref={cardBubbleContainerRef}
+            className="relative mx-[19vw] mt-[100px]"
+            style={{ height: `${cardBubbleContainerHeight}px` }}
+          >
+            <div
+              ref={cardImageSetRefs}
+              style={{ height: `${cardHeight}px` }}
+              className={`relative left-0 w-[32vw] opacity-0 ${
+                cardImageInview ? " animate-smoothAppear" : ""
+              }`}
+            >
+              <Image fill src={"/images/lala_card.png"} alt="card" />
+            </div>
+            <div
+              style={{ height: `${bubbleHeight}px` }}
+              ref={bubbleImageSetRefs}
+              className={`absolute bottom-0 right-0 z-[1] w-[27vw] opacity-0 ${
+                bubbleImageInview ? " animate-smoothAppear" : ""
+              }`}
+            >
+              <Image fill src={"/images/lala_bubble.png"} alt="bubble" />
+            </div>
           </div>
         </div>
         <InView triggerOnce threshold={0.4}>
@@ -299,19 +346,19 @@ const Desktop = () => {
 
       {/* fifth section - news title */}
       <section className="mt-[10px] h-fit font-pretendard">
-        <div className="relative h-[520px]">
-          <div className="absolute left-[360px]">
+        <div className="flex-center gap-[4vw]">
+          <div>
             <img
-              className="h-[520px] w-[520px] rounded-[37px]"
+              className="w-[27vw] rounded-[37px]"
               src="/images/lala_last.png"
               alt="lala_last"
             />
           </div>
-          <article className="flex-start-column absolute right-[306px] top-[100px] w-[654px] gap-[60px] text-[36px] font-[500] leading-[50.4px]">
+          <article className="flex-start-column gap-[2vw] text-[2vw] font-[500] leading-[50px]">
             <p className="w-full">세계 최초 4세대 필링제 LHALAPEEL 개발 </p>
             <p className="w-full">
               {
-                "조선일보가 주최하는 2021 소비자추천 브랜드 ‘필링 솔루션‘ 부문 1위 ‘라라필’"
+                "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위 ‘라라필’"
               }
             </p>
             <p className="w-full">{"20’ LHA 제품 국내 첫 출시"}</p>
