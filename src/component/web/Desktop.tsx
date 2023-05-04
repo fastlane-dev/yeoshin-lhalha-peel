@@ -58,6 +58,48 @@ const Desktop = () => {
     );
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setCardHeight(
+        cardImageRef.current
+          ? (cardImageRef.current?.clientWidth / 100) * 75
+          : 0
+      );
+      setBubbleHeight(
+        bubbleImageRef.current
+          ? (bubbleImageRef.current?.clientWidth / 100) * 128
+          : 0
+      );
+
+      setCardBubbleContainerHeight(
+        cardBubbleContainerRef.current
+          ? (cardBubbleContainerRef.current?.clientWidth / 100) * 70
+          : 0
+      );
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        setCardHeight(
+          cardImageRef.current
+            ? (cardImageRef.current?.clientWidth / 100) * 75
+            : 0
+        );
+        setBubbleHeight(
+          bubbleImageRef.current
+            ? (bubbleImageRef.current?.clientWidth / 100) * 128
+            : 0
+        );
+
+        setCardBubbleContainerHeight(
+          cardBubbleContainerRef.current
+            ? (cardBubbleContainerRef.current?.clientWidth / 100) * 70
+            : 0
+        );
+      });
+    };
+  }, []);
+
   return (
     <section>
       {/* first section - main */}
@@ -187,7 +229,7 @@ const Desktop = () => {
             )}
           </InView>
         </div>
-        <div>
+        <div className="relative">
           <div
             ref={cardBubbleContainerRef}
             className="relative mx-[19vw] mt-[100px]"
@@ -196,7 +238,7 @@ const Desktop = () => {
             <div
               ref={cardImageSetRefs}
               style={{ height: `${cardHeight}px` }}
-              className={`relative left-0 w-[32vw] opacity-0 ${
+              className={`relative left-0 z-10 w-[32vw] opacity-0 ${
                 cardImageInview ? " animate-smoothAppear" : ""
               }`}
             >
@@ -212,17 +254,17 @@ const Desktop = () => {
               <Image fill src={"/images/lala_bubble.png"} alt="bubble" />
             </div>
           </div>
+          <InView triggerOnce threshold={0.4}>
+            {({ inView, ref }) => (
+              <div
+                ref={ref}
+                className={`absolute top-[75%] origin-left rotate-[3deg] ${
+                  inView ? "animate-lineAppear" : ""
+                } border-[#FE3B1F]" border-b-[1px]`}
+              ></div>
+            )}
+          </InView>
         </div>
-        <InView triggerOnce threshold={0.4}>
-          {({ inView, ref }) => (
-            <div
-              ref={ref}
-              className={`absolute top-[86%] origin-left rotate-[3deg] ${
-                inView ? "animate-lineAppear" : ""
-              } border-[#FE3B1F]" border-b-[1px]`}
-            ></div>
-          )}
-        </InView>
       </article>
 
       {/* third section - Core Ingredients*/}
