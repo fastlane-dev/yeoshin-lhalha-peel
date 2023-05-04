@@ -265,7 +265,7 @@ const Mobile = () => {
               <div
                 className={`${
                   inView ? "animate-mobileLogoSpin" : ""
-                } absolute right-[30px] h-[216px] w-[210px] -rotate-45`}
+                } absolute right-[30px] z-10 h-[216px] w-[210px] -rotate-45`}
               >
                 <img
                   src={"/images/lala_spinning_logo.png"}

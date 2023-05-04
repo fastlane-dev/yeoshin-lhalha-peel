@@ -24,7 +24,7 @@ module.exports = {
       },
       animation: {
         logoSpin: "logoSpin 0.8s forwards linear",
-        mobileLogoSpin: "logoSpin 1.2s forwards linear",
+        mobileLogoSpin: "logoSpin 0.8s forwards linear",
 
         smoothAppear: "smoothAppear 0.7s forwards ease-in-out",
 
