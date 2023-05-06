@@ -5,9 +5,6 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { InView, useInView } from "react-intersection-observer";
 
 const Desktop = () => {
-  const [innerWidth, setInnerWidth] = useState(1920);
-  const [bubbleHeight, setBubbleHeight] = useState(0);
-  const [cardHeight, setCardHeight] = useState(0);
   const [cardBubbleContainerHeight, setCardBubbleContainerHeight] = useState(0);
 
   const cardImageRef = useRef<HTMLDivElement>();
@@ -41,16 +38,6 @@ const Desktop = () => {
   );
 
   useEffect(() => {
-    setInnerWidth(window.innerWidth);
-    setCardHeight(
-      cardImageRef.current ? (cardImageRef.current?.clientWidth / 100) * 75 : 0
-    );
-    setBubbleHeight(
-      bubbleImageRef.current
-        ? (bubbleImageRef.current?.clientWidth / 100) * 128
-        : 0
-    );
-
     setCardBubbleContainerHeight(
       cardBubbleContainerRef.current
         ? (cardBubbleContainerRef.current?.clientWidth / 100) * 70
@@ -60,17 +47,6 @@ const Desktop = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setCardHeight(
-        cardImageRef.current
-          ? (cardImageRef.current?.clientWidth / 100) * 75
-          : 0
-      );
-      setBubbleHeight(
-        bubbleImageRef.current
-          ? (bubbleImageRef.current?.clientWidth / 100) * 128
-          : 0
-      );
-
       setCardBubbleContainerHeight(
         cardBubbleContainerRef.current
           ? (cardBubbleContainerRef.current?.clientWidth / 100) * 70
@@ -80,17 +56,6 @@ const Desktop = () => {
 
     return () => {
       window.removeEventListener("resize", () => {
-        setCardHeight(
-          cardImageRef.current
-            ? (cardImageRef.current?.clientWidth / 100) * 75
-            : 0
-        );
-        setBubbleHeight(
-          bubbleImageRef.current
-            ? (bubbleImageRef.current?.clientWidth / 100) * 128
-            : 0
-        );
-
         setCardBubbleContainerHeight(
           cardBubbleContainerRef.current
             ? (cardBubbleContainerRef.current?.clientWidth / 100) * 70
@@ -237,21 +202,29 @@ const Desktop = () => {
           >
             <div
               ref={cardImageSetRefs}
-              style={{ height: `${cardHeight}px` }}
+              // style={{ height: `${cardHeight}px` }}
               className={`relative left-0 z-10 w-[32vw] opacity-0 ${
                 cardImageInview ? " animate-smoothAppear" : ""
               }`}
             >
-              <Image fill src={"/images/lala_card.png"} alt="card" />
+              <img
+                style={{ objectFit: "contain" }}
+                src={"/images/lala_card.png"}
+                alt="card"
+              />
             </div>
             <div
-              style={{ height: `${bubbleHeight}px` }}
+              // style={{ height: `${bubbleHeight}px` }}
               ref={bubbleImageSetRefs}
               className={`absolute bottom-0 right-0 z-[1] w-[27vw] opacity-0 ${
                 bubbleImageInview ? " animate-smoothAppear" : ""
               }`}
             >
-              <Image fill src={"/images/lala_bubble.png"} alt="bubble" />
+              <img
+                style={{ objectFit: "contain" }}
+                src={"/images/lala_bubble.png"}
+                alt="bubble"
+              />
             </div>
           </div>
           <InView triggerOnce threshold={0.4}>
