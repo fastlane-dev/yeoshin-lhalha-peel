@@ -6,6 +6,7 @@ import { InView, useInView } from "react-intersection-observer";
 
 const Desktop = () => {
   const [cardBubbleContainerHeight, setCardBubbleContainerHeight] = useState(0);
+  const [innerWidth, setInnerWidth] = useState(0);
 
   const cardImageRef = useRef<HTMLDivElement>();
   const { ref: cardImageInViewRef, inView: cardImageInview } = useInView({
@@ -38,6 +39,7 @@ const Desktop = () => {
   );
 
   useEffect(() => {
+    setInnerWidth(window.innerWidth);
     setCardBubbleContainerHeight(
       cardBubbleContainerRef.current
         ? (cardBubbleContainerRef.current?.clientWidth / 100) * 70
