@@ -34,11 +34,11 @@ module.exports = {
         lineAppear: "lineAppear 1.5s forwards linear",
         imageAppear: "smoothAppear 0.8s forwards linear",
 
-        keywordStartAt0s: "moveFromDownToUp 0.4s forwards ease-in-out",
+        keywordStartAt0s: "moveFromDownToUp 0.4s forwards 0.3s ease-in-out",
         keywordStartAt0_2s: "moveFromDownToUp 0.4s forwards 0.5s ease-in-out",
-        keywordStartAt0_4s: "moveFromDownToUp 0.4s forwards 0.9s ease-in-out",
-        keywordStartAt0_6s: "moveFromDownToUp 0.4s forwards 1.3s ease-in-out",
-        keywordStartAt0_8s: "moveFromDownToUp 0.4s forwards 1.7s ease-in-out",
+        keywordStartAt0_4s: "moveFromDownToUp 0.4s forwards 0.7s ease-in-out",
+        keywordStartAt0_6s: "moveFromDownToUp 0.4s forwards 0.9s ease-in-out",
+        keywordStartAt0_8s: "moveFromDownToUp 0.4s forwards 1.1s ease-in-out",
       },
       keyframes: {
         logoSpin: {

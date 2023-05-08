@@ -204,7 +204,6 @@ const Desktop = () => {
           >
             <div
               ref={cardImageSetRefs}
-              // style={{ height: `${cardHeight}px` }}
               className={`relative left-0 z-10 w-[32vw] opacity-0 ${
                 cardImageInview ? " animate-smoothAppear" : ""
               }`}
@@ -216,7 +215,6 @@ const Desktop = () => {
               />
             </div>
             <div
-              // style={{ height: `${bubbleHeight}px` }}
               ref={bubbleImageSetRefs}
               className={`absolute bottom-0 right-0 z-[1] w-[27vw] opacity-0 ${
                 bubbleImageInview ? " animate-smoothAppear" : ""
