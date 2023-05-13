@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { useEffect, useState } from "react";
 import Desktop from "@/component/web/Desktop";
 import Mobile from "@/component/mobile/Mobile";
+import Head from "next/head";
 
 const FaktumTest = localFont({
   variable: "--font-faktumTest",
@@ -105,10 +106,15 @@ export default function Home() {
     };
   }, []);
   return (
-    <main
-      className={`whitespace-pre-wrap text-orange ${Pretendard.variable} ${FaktumTest.variable}`}
-    >
-      {isWeb ? <Desktop /> : <Mobile />}
-    </main>
+    <>
+      <Head>
+        <title>LHA LALA</title>
+      </Head>
+      <main
+        className={`whitespace-pre-wrap text-orange ${Pretendard.variable} ${FaktumTest.variable}`}
+      >
+        {isWeb ? <Desktop /> : <Mobile />}
+      </main>
+    </>
   );
 }
