@@ -409,8 +409,8 @@ const Desktop = () => {
             </div>
 
             <div className="flex-start-column gap-[5px]">
-              <p className="font-pretendard text-[18px] font-[300] leading-[24.1px]">
-                서울특별시 강남구 테헤란로 423 현대타워, 10층
+              <p className="font-pretendard text-[18px] font-[400] leading-[24.1px]">
+                경기도 용인시 기흥구 동백중앙로 191, 8층 A8323호
               </p>
               <p className="text-[20px] leading-[26.78px]">Ⓒ Ysmedi Co. Ltd.</p>
             </div>
