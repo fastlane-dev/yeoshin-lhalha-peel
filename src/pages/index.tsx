@@ -1,9 +1,15 @@
-import Image from "next/image";
+import Head from "next/head";
+import dynamic from "next/dynamic";
+
 import localFont from "next/font/local";
 import { useEffect, useState } from "react";
-import Desktop from "@/component/web/Desktop";
-import Mobile from "@/component/mobile/Mobile";
-import Head from "next/head";
+
+const Desktop = dynamic(() => import("../component/web/Desktop"), {
+  ssr: false,
+});
+const Mobile = dynamic(() => import("../component/mobile/Mobile"), {
+  ssr: false,
+});
 
 const FaktumTest = localFont({
   variable: "--font-faktumTest",
