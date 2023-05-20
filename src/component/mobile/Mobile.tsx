@@ -11,11 +11,11 @@ const Mobile = () => {
         <div className="flex-start-column gap-[69px] pl-[31px] pt-[44px]">
           <img alt="logo" src={"/images/logo.png"} width={67} height={17} />
           <div className="relative h-[120px] w-screen">
-            <div className="absolute animate-mainLogoDisappear font-pretendard text-[50px] font-[600] leading-[59.67px]">
-              {"벗기지 않고\n채워주는"}
-            </div>
             <div className="absolute animate-mainLogoAppear font-pretendard text-[50px] font-[600] leading-[59.67px] opacity-0">
               {"4세대 필링\n라라필"}
+            </div>
+            <div className="absolute animate-mainLogoDisappear font-pretendard text-[50px] font-[600] leading-[59.67px]">
+              {"벗기지 않고\n채워주는"}
             </div>
           </div>
         </div>
@@ -176,7 +176,9 @@ const Mobile = () => {
           {({ inView, ref }) => (
             <p
               ref={ref}
-              className={`text-[20px] font-[300] leading-[20px] opacity-0 ${inView}`}
+              className={`text-[20px] font-[300] leading-[20px] opacity-0 ${
+                inView ? "animate-smoothAppear" : ""
+              }`}
             >
               Core Ingredients
             </p>
