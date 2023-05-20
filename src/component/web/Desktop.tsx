@@ -332,9 +332,9 @@ const Desktop = () => {
       <section className="relative mt-[133px] h-fit">
         <InView triggerOnce threshold={0.4}>
           {({ inView, ref }) => (
-            <div ref={ref} className="relative h-[373px] ">
+            <div ref={ref} className="relative h-[20vw] ">
               <div
-                className={`absolute right-[220px] h-[373px] w-[364px] -rotate-45 ${
+                className={`absolute right-[10vw] h-[20vw] w-[20vw] -rotate-45 ${
                   inView ? "animate-logoSpin" : ""
                 }`}
               >
@@ -349,8 +349,7 @@ const Desktop = () => {
                     ref={ref}
                     className={`absolute ${
                       inView ? "animate-lineAppear" : ""
-                    } w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
-                    style={{ top: `${calculateTopValue(innerWidth)}%` }}
+                    } top-[85%] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
                   ></div>
                 )}
               </InView>
