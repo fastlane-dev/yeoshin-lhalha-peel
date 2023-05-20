@@ -372,10 +372,10 @@ const Desktop = () => {
             <p className="w-full">세계 최초 4세대 필링제 LHALAPEEL 개발 </p>
             <p className="w-full">
               {
-                "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위 ‘라라필’"
+                "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위"
               }
             </p>
-            <p className="w-full">{"20’ LHA 제품 국내 첫 출시"}</p>
+            <p className="w-full">{"2020 LHA 제품 국내 첫 출시"}</p>
           </article>
         </div>
         <div className="mt-[201px] pl-[160px] pr-[283px] text-[20px] font-[600] leading-[36px] text-gray">
