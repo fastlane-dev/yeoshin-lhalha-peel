@@ -21,7 +21,7 @@ const Mobile = () => {
         </div>
         <div className="relative  mt-[88px] h-[328px]">
           <div className="absolute left-[calc(2%+26px)] top-[calc(12%+80px)] w-fit origin-left -rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
-            LHALA FILL
+            LHALHA PEEL
           </div>
           <div className="absolute right-[calc(0%-29px)] top-0 z-[1] inline-block h-[328px] w-[328px] animate-imageAppear">
             <Image

@@ -81,8 +81,8 @@ const Desktop = () => {
         </div>
 
         <div className="flex-center relative top-[-45px] h-[49vw] justify-between">
-          <div className="relative left-[3vw] w-fit  origin-left -rotate-90  text-[14px] leading-[19.2px] tracking-[0.05em]">
-            LHALA FILL
+          <div className="relative left-[3vw] top-[33px] w-fit  origin-left -rotate-90  text-[14px] leading-[19.2px] tracking-[0.05em]">
+            LHALHA PEEL
           </div>
           <div className="relative left-[11vw] top-[-6.5vw] w-[21vw]">
             <div className="absolute z-[2] animate-mainLogoAppear font-pretendard text-[4.5vw] font-[600] leading-[5.5vw] opacity-0">
@@ -96,8 +96,8 @@ const Desktop = () => {
             <img alt="main_image" src={"/images/main_image.png"} />
           </div>
 
-          <div className="relative right-[3vw] w-fit origin-right rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
-            LHALA FILL
+          <div className="relative right-[3vw] top-[33px] w-fit origin-right rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
+            LHALHA PEEL
           </div>
           <div className="absolute top-[105%] origin-left -rotate-[9deg] animate-lineAppear border-b-[1px] border-[#FE3B1F] "></div>
         </div>
