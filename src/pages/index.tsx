@@ -114,7 +114,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>LHA LALA</title>
+        <title>LHALALA</title>
       </Head>
       <main
         className={`whitespace-pre-wrap text-orange ${Pretendard.variable} ${FaktumTest.variable}`}
