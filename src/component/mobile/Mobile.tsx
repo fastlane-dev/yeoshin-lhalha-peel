@@ -11,17 +11,17 @@ const Mobile = () => {
         <div className="flex-start-column gap-[69px] pl-[31px] pt-[44px]">
           <img alt="logo" src={"/images/logo.png"} width={67} height={17} />
           <div className="relative h-[120px] w-screen">
-            <div className="absolute animate-mainLogoDisappear font-pretendard text-[50px] font-[600] leading-[59.67px]">
-              {"벗기지 않고\n채워주는"}
-            </div>
             <div className="absolute animate-mainLogoAppear font-pretendard text-[50px] font-[600] leading-[59.67px] opacity-0">
               {"4세대 필링\n라라필"}
+            </div>
+            <div className="absolute animate-mainLogoDisappear font-pretendard text-[50px] font-[600] leading-[59.67px]">
+              {"벗기지 않고\n채워주는"}
             </div>
           </div>
         </div>
         <div className="relative  mt-[88px] h-[328px]">
           <div className="absolute left-[calc(2%+26px)] top-[calc(12%+80px)] w-fit origin-left -rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
-            LHALA FILL
+            LHALHA PEEL
           </div>
           <div className="absolute right-[calc(0%-29px)] top-0 z-[1] inline-block h-[328px] w-[328px] animate-imageAppear">
             <Image
@@ -176,7 +176,9 @@ const Mobile = () => {
           {({ inView, ref }) => (
             <p
               ref={ref}
-              className={`text-[20px] font-[300] leading-[20px] opacity-0 ${inView}`}
+              className={`text-[20px] font-[300] leading-[20px] opacity-0 ${
+                inView ? "animate-smoothAppear" : ""
+              }`}
             >
               Core Ingredients
             </p>
@@ -227,7 +229,7 @@ const Mobile = () => {
                 </div>
                 <p className="font-pretendard text-[16px] font-[500] leading-[24px]">
                   {
-                    "특허받은 알칼리 성분 P-sol은 섬유아세포를 활성화해 콜라겐과 피부 지지 구조의 복원을 돕고, LHA와 결합 하여 멜라닌을 녹여 피부 투명도를 개선해줍니다."
+                    "특허받은 알칼리 성분 P-sol은 섬유아세포를 활성화해 콜라겐과 피부 지지 구조의 복원을 돕고, LHA와 결합하여 멜라닌을 녹여 피부 투명도를 개선해줍니다."
                   }
                 </p>
               </div>
@@ -296,21 +298,21 @@ const Mobile = () => {
           <p className="w-full">세계 최초 4세대 필링제 LHALAPEEL 개발 </p>
           <p className="w-full">
             {
-              "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위 ‘라라필’"
+              "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위"
             }
           </p>
-          <p className="w-full">{"20’ LHA 제품 국내 첫 출시"}</p>
+          <p className="w-full">{"2020 LHA 제품 국내 첫 출시"}</p>
         </article>
         <div className="mt-[60px] px-[30px] font-[600] text-gray">
           <p className="text-[12px]  leading-[21.6px]">
             {
-              "본사의 유통 제품을 허가나 동의 없이 비정상 유통경로로 판매하는 업체들이 있습니다. 병의원이 아닌 곳에서 시술을 제공받을시 피해를 입을 수 있으며, 품질 보증이나 고객지원이 불가하니 반드시 정식 유 통 제품으로 서비스 받으시기 바랍니다."
+              "본사의 유통 제품을 허가나 동의 없이 비정상 유통경로로 판매하는 업체들이 있습니다. 병의원이 아닌 곳에서 시술을 제공받을 시 피해를 입을 수 있으며, 품질 보증이나 고객지원이 불가하니 반드시 정식 유통 제품으로 서비스 받으시기 바랍니다."
             }
           </p>
           <div className="mt-[19px] text-[10px] leading-[18px]">
             <p>
               {
-                "LHALALA 브랜드의 BI를 도용하여 사용할 경우 상표법 제 93조에 의거하여 처벌받게 됩니다."
+                "LHALALA 브랜드의 BI를 도용하여 사용할 경우 상표법 제93조에 의거하여 처벌받게 됩니다."
               }
             </p>
             <div className="mt-[5px] flex items-start justify-start">
@@ -344,7 +346,7 @@ const Mobile = () => {
 
           <div className="flex-start-column gap-[6px]">
             <p className="font-pretendard font-[300]">
-              서울특별시 강남구 테헤란로 423 현대타워, 10층
+              경기도 용인시 기흥구 동백중앙로 191, 8층 A8323호
             </p>
             <p>Ⓒ Ysmedi Co. Ltd.</p>
           </div>

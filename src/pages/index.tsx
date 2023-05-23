@@ -1,9 +1,15 @@
-import Image from "next/image";
+import Head from "next/head";
+import dynamic from "next/dynamic";
+
 import localFont from "next/font/local";
 import { useEffect, useState } from "react";
-import Desktop from "@/component/web/Desktop";
-import Mobile from "@/component/mobile/Mobile";
-import Head from "next/head";
+
+const Desktop = dynamic(() => import("../component/web/Desktop"), {
+  ssr: false,
+});
+const Mobile = dynamic(() => import("../component/mobile/Mobile"), {
+  ssr: false,
+});
 
 const FaktumTest = localFont({
   variable: "--font-faktumTest",
@@ -86,9 +92,9 @@ export default function Home() {
   const [isWeb, setIsWeb] = useState(true);
 
   useEffect(() => {
-    setIsWeb(window.innerWidth > 1024);
+    setIsWeb(window.innerWidth > 800);
     window.addEventListener("resize", () => {
-      if (window.innerWidth < 1024) {
+      if (window.innerWidth < 800) {
         setIsWeb(false);
       } else {
         setIsWeb(true);
@@ -97,7 +103,7 @@ export default function Home() {
 
     return () => {
       window.removeEventListener("resize", () => {
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth < 800) {
           setIsWeb(false);
         } else {
           setIsWeb(true);
@@ -108,7 +114,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>LHA LALA</title>
+        <title>LHALALA</title>
       </Head>
       <main
         className={`whitespace-pre-wrap text-orange ${Pretendard.variable} ${FaktumTest.variable}`}

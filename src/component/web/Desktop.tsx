@@ -81,8 +81,8 @@ const Desktop = () => {
         </div>
 
         <div className="flex-center relative top-[-45px] h-[49vw] justify-between">
-          <div className="relative left-[3vw] w-fit  origin-left -rotate-90  text-[14px] leading-[19.2px] tracking-[0.05em]">
-            LHALA FILL
+          <div className="relative left-[3vw] top-[33px] w-fit  origin-left -rotate-90  text-[14px] leading-[19.2px] tracking-[0.05em]">
+            LHALHA PEEL
           </div>
           <div className="relative left-[11vw] top-[-6.5vw] w-[21vw]">
             <div className="absolute z-[2] animate-mainLogoAppear font-pretendard text-[4.5vw] font-[600] leading-[5.5vw] opacity-0">
@@ -96,8 +96,8 @@ const Desktop = () => {
             <img alt="main_image" src={"/images/main_image.png"} />
           </div>
 
-          <div className="relative right-[3vw] w-fit origin-right rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
-            LHALA FILL
+          <div className="relative right-[3vw] top-[33px] w-fit origin-right rotate-90 text-[14px] leading-[19.2px] tracking-[0.05em]">
+            LHALHA PEEL
           </div>
           <div className="absolute top-[105%] origin-left -rotate-[9deg] animate-lineAppear border-b-[1px] border-[#FE3B1F] "></div>
         </div>
@@ -298,7 +298,7 @@ const Desktop = () => {
                 </div>
                 <p className="font-pretendard text-[26px] font-[500] leading-[39px]">
                   {
-                    "특허받은 알칼리 성분 P-sol은 섬유아세포를 활성화해 콜라겐과 피부 지지 구조의 복원을 돕고, LHA와 결합 하여 멜라닌을 녹여 피부 투명도를 개선해줍니다."
+                    "특허받은 알칼리 성분 P-sol은 섬유아세포를 활성화해 콜라겐과 피부 지지 구조의 복원을 돕고, LHA와 결합하여 멜라닌을 녹여 피부 투명도를 개선해줍니다."
                   }
                 </p>
               </div>
@@ -332,9 +332,9 @@ const Desktop = () => {
       <section className="relative mt-[133px] h-fit">
         <InView triggerOnce threshold={0.4}>
           {({ inView, ref }) => (
-            <div ref={ref} className="relative h-[373px] ">
+            <div ref={ref} className="relative h-[20vw] ">
               <div
-                className={`absolute right-[220px] h-[373px] w-[364px] -rotate-45 ${
+                className={`absolute right-[10vw] h-[20vw] w-[20vw] -rotate-45 ${
                   inView ? "animate-logoSpin" : ""
                 }`}
               >
@@ -349,8 +349,7 @@ const Desktop = () => {
                     ref={ref}
                     className={`absolute ${
                       inView ? "animate-lineAppear" : ""
-                    } w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
-                    style={{ top: `${calculateTopValue(innerWidth)}%` }}
+                    } top-[85%] w-[101vw] origin-left -rotate-[4.8deg] border-b-[1px] border-[#FE3B1F]`}
                   ></div>
                 )}
               </InView>
@@ -373,22 +372,22 @@ const Desktop = () => {
             <p className="w-full">세계 최초 4세대 필링제 LHALAPEEL 개발 </p>
             <p className="w-full">
               {
-                "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위 ‘라라필’"
+                "조선일보가 주최하는 2021 소비자추천 브랜드\n‘필링 솔루션‘ 부문 1위"
               }
             </p>
-            <p className="w-full">{"20’ LHA 제품 국내 첫 출시"}</p>
+            <p className="w-full">{"2020 LHA 제품 국내 첫 출시"}</p>
           </article>
         </div>
         <div className="mt-[201px] pl-[160px] pr-[283px] text-[20px] font-[600] leading-[36px] text-gray">
           <p className="">
             {
-              "본사의 유통 제품을 허가나 동의 없이 비정상 유통경로로 판매하는 업체들이 있습니다.\n병의원이 아닌 곳에서 시술을 제공받을시 피해를 입을 수 있으며, 품질 보증이나 고객지원이 불가하니 반드시 정식 유통 제품으로 서비스 받으시기 바랍니다."
+              "본사의 유통 제품을 허가나 동의 없이 비정상 유통경로로 판매하는 업체들이 있습니다.\n병의원이 아닌 곳에서 시술을 제공받을 시 피해를 입을 수 있으며, 품질 보증이나 고객지원이 불가하니 반드시 정식 유통 제품으로 서비스 받으시기 바랍니다."
             }
           </p>
           <div className="mt-[36px] ">
             <p>
               {
-                "LHALALA 브랜드의 BI를 도용하여 사용할 경우 상표법 제 93조에 의거하여 처벌받게 됩니다."
+                "LHALALA 브랜드의 BI를 도용하여 사용할 경우 상표법 제93조에 의거하여 처벌받게 됩니다."
               }
             </p>
             <p className="before:mr-[4px] before:content-['•']">
@@ -410,7 +409,7 @@ const Desktop = () => {
 
             <div className="flex-start-column gap-[5px]">
               <p className="font-pretendard text-[18px] font-[300] leading-[24.1px]">
-                서울특별시 강남구 테헤란로 423 현대타워, 10층
+                경기도 용인시 기흥구 동백중앙로 191, 8층 A8323호
               </p>
               <p className="text-[20px] leading-[26.78px]">Ⓒ Ysmedi Co. Ltd.</p>
             </div>

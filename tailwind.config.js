@@ -28,8 +28,8 @@ module.exports = {
 
         smoothAppear: "smoothAppear 0.7s forwards ease-in-out",
 
-        mainLogoAppear: "smoothAppear 0.8s forwards 1.5s ease-in-out",
-        mainLogoDisappear: "smoothDisappear 0.8s forwards 1.3s ease-in-out",
+        mainLogoAppear: "fade 2.5s both ease-in-out infinite alternate-reverse",
+        mainLogoDisappear: "fade 2.5s both ease-in-out infinite alternate",
 
         lineAppear: "lineAppear 1.5s forwards linear",
         imageAppear: "smoothAppear 0.8s forwards linear",
@@ -50,6 +50,22 @@ module.exports = {
             transform: "rotate(5deg)",
           },
         },
+
+        fade: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            opacity: 0,
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(20px)",
+          },
+        },
+
         smoothAppear: {
           "0%": {
             opacity: 0,
@@ -58,16 +74,6 @@ module.exports = {
           "100%": {
             opacity: 1,
             transform: "translateY(0px)",
-          },
-        },
-        smoothDisappear: {
-          "0%": {
-            opacity: 1,
-            transform: "translateY(0px)",
-          },
-          "100%": {
-            opacity: 0,
-            transform: "translateY(-20px)",
           },
         },
         lineAppear: {
